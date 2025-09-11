@@ -32,7 +32,7 @@ For classification problems, we define the target variable as:
 
 **1 → High pulse rate risk (> 100 bpm)**
 
-📌 Dataset Source: Kaggle – Human Vital Signs Dataset(CSV file format)
+***📌 Dataset Source: Kaggle – Human Vital Signs Dataset(CSV file format)***
 
 ⚙️ Project Workflow
 1. **Data Exploration & Visualization**
@@ -73,11 +73,11 @@ Implementing four classification algorithms:
 
 ***Visualization of confusion matrix heatmaps***
 
-📈 Results: 
+**📈 Results: 
 Algorithm	Accuracy (example run)
 Logistic Regression	~92%
 Random Forest	~94%
 Gradient Boosting	~93%
-Support Vector Machine	~91%
+Support Vector Machine	~91%**
 
 ✅ Random Forest performed best, but model performance may vary depending on dataset splits.
