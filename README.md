@@ -73,11 +73,11 @@ Implementing four classification algorithms:
 
 ***Visualization of confusion matrix heatmaps***
 
-**📈 Results: 
-Algorithm	Accuracy (example run)
-Logistic Regression	~92%
-Random Forest	~94%
-Gradient Boosting	~93%
-Support Vector Machine	~91%**
+**📈 Results:** 
+**Algorithm	Accuracy (example run)**
+**Logistic Regression	~92%**
+**Random Forest	~94%**
+**Gradient Boosting	~93%**
+**Support Vector Machine	~91%**
 
 ✅ Random Forest performed best, but model performance may vary depending on dataset splits.
