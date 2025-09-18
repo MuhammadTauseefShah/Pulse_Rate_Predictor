@@ -35,7 +35,7 @@ Follow these instructions to set up the project on your local machine using a co
 1.  **Clone the Repository**
     Open your terminal or command prompt and clone the repository:
     ```bash
-    git clone https://github.com/your-username/pulse-rate-prediction.git
+    git clone https://github.com/MuhammadTauseefShah/pulse-rate-prediction.git
     cd pulse-rate-prediction
     ```
 
