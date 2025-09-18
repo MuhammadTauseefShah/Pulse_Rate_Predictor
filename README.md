@@ -81,3 +81,24 @@ Follow these instructions to set up the project on your local machine using a co
     -   To run the entire notebook, click the "Run All" (▶▶️) button at the top of the notebook editor.
 
 ## Project Structure
+pulse-rate-prediction/
+├── human_vital_sign_dataset.csv # The dataset file
+├── Pulse_Rate_Predictor.ipynb # The main Jupyter Notebook with all the code
+├── README.md # This README file
+└── requirements.txt # List of Python dependencies
+code
+Code
+## Results Summary
+
+The Random Forest and Linear Regression models demonstrated the highest performance, achieving near-perfect R-squared scores on the test set.
+
+| Model               | R-squared |       MSE |
+| ------------------- | --------- | --------- |
+| Linear Regression   | 1.000000  | 4.52e-28  |
+| K-Neighbors         | 0.945613  | 5.90e+00  |
+| Random Forest       | 1.000000  | 0.00e+00  |
+| Gradient Boosting   | 0.999811  | 2.05e-02  |
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or find any issues, please feel free to open an issue or submit a pull request.
