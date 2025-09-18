@@ -1,83 +1,83 @@
-**Pulse Rate Predictor**
+# Pulse Rate Prediction Project
 
-📖 Project Description: 
+This project focuses on predicting human pulse rate using machine learning. It encompasses a complete workflow from data loading and cleaning to model training and performance evaluation, all contained within the `Pulse_Rate_Predictor.ipynb` Jupyter Notebook.
 
-The Pulse Rate Predictor is a machine learning project that analyzes human vital signs and predicts whether an individual’s pulse rate is within a normal range or indicates a potential health risk.
+This guide provides instructions on how to set up and run the project in a code editor like Visual Studio Code.
 
-This project demonstrates an end-to-end ML workflow — from data exploration and visualization to preprocessing, model training, evaluation, and result interpretation. Four machine learning algorithms are implemented and compared for performance:
+## Project Overview
 
-*Initially we implement Logistic Regression*
+This project serves as a practical guide to building a machine learning model for pulse rate prediction. It explores the use of various regression algorithms on a human vital signs dataset. The primary goal is to demonstrate a clear and effective machine learning pipeline suitable for a local development environment.
 
-*Secondly we use Random Forest Classifier*
+## Features
 
-*Thirdly we implement Gradient Boosting Classifier*
+- **Data Preprocessing**: Cleans and prepares the vital signs dataset for modeling.
+- **Exploratory Data Analysis (EDA)**: Includes a correlation heatmap to visualize feature relationships.
+- **Model Training**: Implements four different regression algorithms:
+    - Linear Regression
+    - K-Nearest Neighbors (KNN)
+    - Random Forest
+    - Gradient Boosting
+- **Performance Evaluation**: Compares models using R-squared and Mean Squared Error (MSE) metrics.
+- **Visualization**: Plots model performance and prediction accuracy.
 
-*Eventually Support Vector Machine Algorithm (SVM)*
+## Getting Started
 
-📊 Dataset
+Follow these instructions to set up the project on your local machine using a code editor.
 
-The project uses the Human Vital Signs Dataset, which includes key physiological measurements:
+### Prerequisites
 
-**1. Age (years)**
-**2. Gender (male/female)**
-**3. Body Temperature (°C)**
-**4. Blood Pressure (mmHg)**
-**5. Pulse Rate (beats per minute)**
-**6. Respiration Rate (breaths per minute)**
-**7. Oxygen Saturation (%)**
+- [Python 3.8+](https://www.python.org/downloads/)
+- A code editor like [Visual Studio Code](https://code.visualstudio.com/) (recommended)
+- [Git](https://git-scm.com/downloads/) for cloning the repository
 
-For classification problems, we define the target variable as:
+### Installation & Setup
 
-**0 → Normal pulse rate (≤ 100 bpm)**
+1.  **Clone the Repository**
+    Open your terminal or command prompt and clone the repository:
+    ```bash
+    git clone https://github.com/your-username/pulse-rate-prediction.git
+    cd pulse-rate-prediction
+    ```
 
-**1 → High pulse rate risk (> 100 bpm)**
+2.  **Set Up a Virtual Environment**
+    It's highly recommended to use a virtual environment to manage project dependencies.
 
-***📌 Dataset Source: Kaggle – Human Vital Signs Dataset(CSV file format)***
+    ```bash
+    # Create a virtual environment
+    python -m venv venv
 
-⚙️ Project Workflow
-1. **Data Exploration & Visualization**
+    # Activate the virtual environment
+    # On Windows:
+    .\venv\Scripts\activate
+    # On macOS/Linux:
+    source venv/bin/activate
+    ```
 
-***Dataset overview and descriptive statistics***
+3.  **Install Dependencies**
+    A `requirements.txt` file is included to easily install all necessary libraries. Run the following command:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-***Pulse rate distribution histogram***
+4.  **Open in Your Code Editor**
+    Launch your code editor. If you are using VS Code, you can open the project folder with:
+    ```bash
+    code .
+    ```
 
-***Scatter plot of age vs Pulse rate***
+### Running the Notebook
 
-2. **Data Preprocessing**
+1.  **Install the Jupyter Extension**
+    If you are using VS Code, make sure you have the [Jupyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) installed. It allows you to run `.ipynb` files directly in the editor.
 
-***Handling categorical variables via encoding***
+2.  **Select the Python Interpreter**
+    -   In VS Code, open the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P`).
+    -   Type `Python: Select Interpreter`.
+    -   Choose the interpreter associated with your virtual environment (`./venv/bin/python` or `.\venv\Scripts\python.exe`).
 
-***Standardizing features using z-score scaling***
+3.  **Run the Notebook Cells**
+    -   Open the `Pulse_Rate_Predictor.ipynb` file in your editor.
+    -   You can run cells individually by clicking the "Run Cell" (▶️) button next to each cell.
+    -   To run the entire notebook, click the "Run All" (▶▶️) button at the top of the notebook editor.
 
-***Creating a binary target variable (risk classification)***
-
-3. **Model Training**
-
-Implementing four classification algorithms:
-
-***Logistic Regression***
-
-***Random Forest***
-
-***Gradient Boosting***
-
-***Support Vector Machine(SVM)***
-
-4. **Model Evaluation**
-
-***Accuracy Scores***
-
-***Confusion matrices***
-
-**Classification reports (precision, recall, F1-score)***
-
-***Visualization of confusion matrix heatmaps***
-
-**📈 Results:** 
-**Algorithm	Accuracy (example run)**
-**Logistic Regression	~92%**
-**Random Forest	~94%**
-**Gradient Boosting	~93%**
-**Support Vector Machine	~91%**
-
-✅ Random Forest performed best, but model performance may vary depending on dataset splits.
+## Project Structure
