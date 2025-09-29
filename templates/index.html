@@ -1,1 +1,45 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Pressure Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pulse Pressure Predictor</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-group">
+                <input type="text" name="Patient ID" placeholder="Patient ID" required="required" />
+                <input type="text" name="Heart Rate" placeholder="Heart Rate" required="required" />
+                <input type="text" name="Respiratory Rate" placeholder="Respiratory Rate" required="required" />
+                <input type="text" name="Body Temperature" placeholder="Body Temperature" required="required" />
+                <input type="text" name="Oxygen Saturation" placeholder="Oxygen Saturation" required="required" />
+                <input type="text" name="Systolic Blood Pressure" placeholder="Systolic Blood Pressure" required="required" />
+                <input type="text" name="Diastolic Blood Pressure" placeholder="Diastolic Blood Pressure" required="required" />
+                <input type="text" name="Age" placeholder="Age" required="required" />
+                <select name="Gender" required="required">
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="0">Female</option>
+                    <option value="1">Male</option>
+                </select>
+                <input type="text" name="Weight (kg)" placeholder="Weight (kg)" required="required" />
+                <input type="text" name="Height (m)" placeholder="Height (m)" required="required" />
+                <input type="text" name="Derived_HRV" placeholder="Derived HRV" required="required" />
+                <input type="text" name="Derived_BMI" placeholder="Derived BMI" required="required" />
+                <input type="text" name="Derived_MAP" placeholder="Derived MAP" required="required" />
+                <select name="Risk Category" required="required">
+                    <option value="" disabled selected>Select Risk Category</option>
+                    <option value="0">Low Risk</option>
+                    <option value="1">High Risk</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        <div class="prediction">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+    </div>
+</body>
+</html>
