@@ -1,54 +1,97 @@
+/* General Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+/* Main Container for the Application */
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
     text-align: center;
 }
 
+/* Main Title */
 h1 {
-    color: #333;
+    color: #1a2c4e;
+    margin-bottom: 25px;
+    font-weight: 600;
 }
 
+/* Form Layout */
 .form-group {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    margin-bottom: 20px;
+    /* Creates a responsive 2-column grid on larger screens */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
 }
 
-input, select {
+/* Input Fields and Select Dropdowns */
+input[type="text"],
+select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
+/* Style for focused input fields */
+input[type="text"]:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Placeholder text style */
+::placeholder {
+    color: #999;
+}
+
+/* Predict Button Styling */
 .btn {
-    background-color: #5cb85c;
+    background: linear-gradient(90deg, #007bff, #0056b3);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn:hover {
-    background-color: #4cae4c;
+    background: linear-gradient(90deg, #0056b3, #003d80);
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Prediction Result Area */
+.prediction {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e9ecef;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
 }
 
 .prediction h2 {
-    color: #333;
-    margin-top: 20px;
+    color: #1a2c4e;
+    font-size: 22px;
+    margin: 0;
 }
